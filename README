@@ -1,0 +1,9 @@
+What is the proper architecture for this project?
+
+The vector of targets (or pointers to targets, depending) seems to need to be in shared memory. It might be possible to send the vector of objects (but not pointers) to each processor in Open-MPI. The result is that each agent would have a copy of the vector. It should be possible for the retargeting code to be reworked to deal with this, but I'm not sure.
+
+Doing this would require message passing when targets are destroyed. Speaking of which, it will probably be easier to rewrite the agent functions from scratch than to try to edit them.
+
+If the OpenMP shared memory model is used, then how will message passing occur? Assuming that each agent knows when the targets are destroyed, the only messages that need passed are the model and the confidence indices.
+> Option 1: Fake messages like in serial code. This might be the simplest to implement, but seems unrealistic. Would much rather have messages passed properly
+> Option 2: Throw MPI on top of OpenMP. Since only sending two arrays (or vectors) this might not actually be that bad. Only problem is that MPI programs are seperate programs.

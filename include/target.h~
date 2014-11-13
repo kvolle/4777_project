@@ -1,0 +1,36 @@
+#ifndef TARGET_H
+#define TARGET_H
+
+#include <cstdlib>
+#include <cstdio>
+
+#include <osg/Node>
+#include <osgDB/ReadFile>
+#include <osg/PositionAttitudeTransform>
+
+class Target: public osg::Referenced{
+public:
+    float position[3];
+	bool destroyed;
+    Target(float,float);
+
+    osg::ref_ptr<osg::Node> target_model;
+    osg::ref_ptr<osg::PositionAttitudeTransform> target_xform;
+
+
+
+};
+
+class target_cb: public osg::NodeCallback{
+    virtual void operator()(osg::Node* node, osg::NodeVisitor* nv){
+        osg::ref_ptr<Target> targetData = dynamic_cast<Target*> (node );
+        /*if(targetData){
+            printf("Shoot\n");
+            if (targetData->destroyed){
+                targetData->target_model = osgDB::readNodeFile("../models/t55/t55d.obj");
+            }
+        }else{}*/
+        traverse(node,nv);
+    }
+};
+#endif

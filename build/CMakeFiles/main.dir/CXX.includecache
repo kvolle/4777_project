@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kyle/Dropbox/Desktop/MATH 4777 - Fall 2014/Final Project/include/Target.h
+cstdlib
+-
+cstdio
+-
+
+/home/kyle/Dropbox/Desktop/MATH 4777 - Fall 2014/Final Project/src/Target.cpp
+../include/Target.h
+/home/kyle/Dropbox/Desktop/MATH 4777 - Fall 2014/Final Project/include/Target.h
+time.h
+-
+
