@@ -4,12 +4,11 @@
 #include <cstdlib>
 #include <cstdio>
 
-class Target{
+struct Target{
 public:
-    float position[3];
-    bool destroyed;
-    float pk;
-    Target(float,float,float);
+    float x_position,y_position,pk;
+    int destroyed;
+    //Target(float,float,float);
 
 };
 

@@ -54,18 +54,11 @@ int main(int argc, char **argv) {
 		targets = create_simulation();
         Target test = targets[0];
         int test_size = sizeof(test);
-        cout << array_of_blocklengths[0]*array_of_displacements[0] << " "<< array_of_blocklengths[1]*array_of_displacements[1] << endl;
         for (int rank=1;rank<ntasks;rank++){
-            /*
-            MPI_Send(&test_size,        // Message Buffer
-                     1,                 // One data item
-                     MPI_INT,           // It is an integer
-                     rank,              // Receiving process
-                     1,                 // Not sure yet
-                     MPI_COMM_WORLD);   // Default communicator
-        */
             // Broadcast the target vector to all agents
-            MPI_Send(&test,1,target_type,rank,1,MPI_COMM_WORLD);
+            for (uint t=0;t<targets.size();t++){
+                MPI_Send(&targets[t],1,target_type,rank,1,MPI_COMM_WORLD);
+            }
         }
 	} else {
         //targets = load_simulation();
