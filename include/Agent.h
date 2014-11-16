@@ -25,10 +25,10 @@ public:
 
     std::vector<int> model;
     std::vector<int> model_confidence_index;
-    std::vector<int> world_state;
+    //std::vector<int> world_state;
 
-    std::vector<Target*> all_targets;
-    Agent(int,float,float,int, std::vector<Target*> &,int,float);//, osg::Group* &);
+    std::vector<Target> all_targets;
+    Agent(int,float,float,int,int,float);//, osg::Group* &);
     ~Agent();
 	void set_velocity();
     void update_state();

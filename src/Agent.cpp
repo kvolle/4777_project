@@ -3,8 +3,7 @@
 #include <algorithm>
 
 #include <cmath>
-Agent::Agent(int id,float x_pos,float y_pos, int init_target,std::vector<Target*> &tar,int numAgents,float eff):all_targets(tar){//,osg::Group* &root_node): all_targets(tar){
-    agent_id = id;
+Agent::Agent(int id,float x_pos,float y_pos, int init_target,int numAgents,float eff){
     state.velocity = 0.0f;
     state.heading = 0.0f;
     state.descent_rate = 0.0f;

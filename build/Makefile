@@ -135,6 +135,30 @@ src/Agent.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Agent.cpp.s
 .PHONY : src/Agent.cpp.s
 
+src/Simulation.o: src/Simulation.cpp.o
+.PHONY : src/Simulation.o
+
+# target to build an object file
+src/Simulation.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Simulation.cpp.o
+.PHONY : src/Simulation.cpp.o
+
+src/Simulation.i: src/Simulation.cpp.i
+.PHONY : src/Simulation.i
+
+# target to preprocess a source file
+src/Simulation.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Simulation.cpp.i
+.PHONY : src/Simulation.cpp.i
+
+src/Simulation.s: src/Simulation.cpp.s
+.PHONY : src/Simulation.s
+
+# target to generate assembly for a file
+src/Simulation.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Simulation.cpp.s
+.PHONY : src/Simulation.cpp.s
+
 src/Target.o: src/Target.cpp.o
 .PHONY : src/Target.o
 
@@ -195,6 +219,9 @@ help:
 	@echo "... src/Agent.o"
 	@echo "... src/Agent.i"
 	@echo "... src/Agent.s"
+	@echo "... src/Simulation.o"
+	@echo "... src/Simulation.i"
+	@echo "... src/Simulation.s"
 	@echo "... src/Target.o"
 	@echo "... src/Target.i"
 	@echo "... src/Target.s"

@@ -19,7 +19,7 @@ set(CMAKE CXX COMPILER mpicxx)
 set(CMAKE_CXX_FLAGS "-std=c++0x")
 set(CMAKE_MODULE_PATH "PATH_TO/CMakeModules;${CMAKE_MODULE_PATH}")
 
-target_link_libraries(simulation ${MPI_LIBRARIES})
+target_link_libraries(main ${MPI_LIBRARIES})
 
 #if(MPI_COMPILE_FLAGS)
 #  set_target_properties(hello PROPERTIES

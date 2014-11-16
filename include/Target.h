@@ -6,7 +6,7 @@
 
 struct Target{
 public:
-    float x_position,y_position,pk;
+    float dummy,x_position,y_position,pk;
     int destroyed;
     //Target(float,float,float);
 
