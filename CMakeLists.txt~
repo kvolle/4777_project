@@ -8,7 +8,7 @@ PROJECT(simulation)
 find_package(MPI REQUIRED)
 include_directories(${MPI_INCLUDE_PATH})
 file(GLOB exec_source "src/*.cpp" "include/*.h*")
-add_executable(main src/main.cpp src/Agent.cpp src/Target.cpp)
+add_executable(main src/main.cpp src/Agent.cpp src/Target.cpp src/Simulation.cpp src/Report.cpp)
 #add_executable(main ${exec_source})
 ########################################################
 # Linking & stuff
