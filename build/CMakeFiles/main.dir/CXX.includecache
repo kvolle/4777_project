@@ -32,12 +32,6 @@ cstdlib
 cstdio
 -
 
-/home/kyle/Dropbox/Desktop/MATH 4777 - Fall 2014/Final Project/src/Simulation.cpp
-../include/Simulation.h
-/home/kyle/Dropbox/Desktop/MATH 4777 - Fall 2014/Final Project/include/Simulation.h
-time.h
--
-
 /home/kyle/Dropbox/Desktop/MATH 4777 - Fall 2014/Final Project/src/main.cpp
 mpi.h
 /home/kyle/Dropbox/Desktop/MATH 4777 - Fall 2014/Final Project/src/mpi.h
